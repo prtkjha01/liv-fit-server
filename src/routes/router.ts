@@ -1,0 +1,26 @@
+import { Router } from "express";
+// import productRouter from "./productRouter";
+import authRouter from "./authRouter";
+import userRouter from "./userRouter";
+import statsRouter from "./statsRouter";
+import workoutRouter from "./workoutRouter";
+import sleepRouter from "./sleepRouter";
+import stepsRouter from "./stepsRouter";
+import exerciseRouter from "./exerciseRouter";
+import waterRouter from "./waterRouter";
+import tutorialRouter from "./tutorialRouter";
+import blogRouter from "./blogRouter";
+const router = Router();
+
+// router.use(productRouter);
+router.use(authRouter);
+router.use(userRouter);
+router.use(statsRouter);
+router.use(workoutRouter);
+router.use(sleepRouter);
+router.use(stepsRouter);
+router.use(exerciseRouter);
+router.use(waterRouter);
+router.use(tutorialRouter);
+router.use(blogRouter);
+export default router;
