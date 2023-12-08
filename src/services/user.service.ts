@@ -24,6 +24,17 @@ const getAll = async (req: Request, res: Response) => {
   }
 };
 
+/********************** GET FUNCTION, TO GET USER WITH THE SPECIFIED ID***************************/
+const getUser = async (req: User, res: Response) => {
+  const { userId } = req.user;
+  try {
+    const user = await userModel.findById(userId);
+    res.send(user);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+};
+
 /***************************** UPDATE FUNCTION, IF USER WANTS TO UPDATE HIS/HER ANY FIELD ***************************/
 const updateUser = async (req: Request, res: Response) => {
   // const _id = decodedToken.userId
@@ -186,6 +197,7 @@ const updatePassword = async (req: User, res: Response) => {
 
 export default {
   getAll,
+  getUser,
   updateUser,
   updatePassword,
   deleteUser,

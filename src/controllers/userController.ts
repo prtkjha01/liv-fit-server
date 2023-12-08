@@ -7,6 +7,11 @@ export const getAll = async (req: Request, res: Response) => {
   return userService.getAll(req, res);
 };
 
+/********************** GET ALL FUNCTION, TO GET ALL THE USERS IN OUR DATABSE, ONLY ADMIN HAVE THE AUTHORITY TO CALL THIS FUNCTION***************************/
+export const getUser = async (req: User, res: Response) => {
+  return userService.getUser(req, res);
+};
+
 /***************************** UPDATE FUNCTION, IF USER WANTS TO UPDATE HIS/HER ANY FIELD ***************************/
 export const updateUser = async (req: Request, res: Response) => {
   return userService.updateUser(req, res);

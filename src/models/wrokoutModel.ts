@@ -4,7 +4,8 @@ var Schema = mongoose.Schema;
 
 const exerciseSchema = new Schema(
   {
-    name: { type: String, required: true },
+    // name: { type: String, required: true },
+    data: { type: mongoose.Types.ObjectId, required: true, ref: "Exercises" },
     sets: { type: Number, required: true },
     reps: { type: Number, required: true },
     weight: { type: Number, required: true },

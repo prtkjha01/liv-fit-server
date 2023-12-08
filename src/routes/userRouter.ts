@@ -2,6 +2,7 @@ import { Router } from "express";
 import { verifyToken, checkAdmin } from "../middlewares/auth";
 import {
   getAll,
+  getUser,
   deleteUser,
   forgotPassword,
   updatePassword,
@@ -10,6 +11,7 @@ import {
 
 const userRouter = Router();
 
+userRouter.get("/user", verifyToken as any, getUser as any);
 userRouter.get("/user/get-all", getAll);
 userRouter.delete(
   "/user/delete-user/:id",
