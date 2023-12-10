@@ -1,6 +1,6 @@
-# My E-com
+# LivFit
 
-The My E-com Backend is a RESTful API built to support the My E-com online marketplace application.
+The LivFit Backend is a RESTful API built to support the LivFit web application.
 
 ## Features
 
@@ -8,11 +8,11 @@ The My E-com Backend is a RESTful API built to support the My E-com online marke
 
 - CRUD operations.
 
-- Orders management.
+- Stats management.
 
-- Cart System.
+- Tracking.
 
-- Discount Coupon Generation after every nth order made by the customer.
+- Workout Guidance.
 
 ### Technology Stack
 
@@ -33,7 +33,7 @@ These instructions will get you a copy of the project up and running on your loc
 1. Clone the repository:
 
 ```shell
-$ git clone https://github.com/prtkjha01/my-ecom-server.git
+$ git clone https://github.com/prtkjha01/liv-fit-server.git
 ```
 
 2. Install dependencies:
@@ -59,51 +59,13 @@ $ cd src
 and then run this
 
 ```shell
-$ nodemon app.js
+$ nodemon index.js
 ```
 
 If this doesn't work out then run this command in the src directory.
 
 ```shell
-$ npx nodemon app.js
+$ npx nodemon index.js
 ```
 
-4. Access the API at `http://localhost:3000/`
-
-# Documentation
-
-API documentation is available on this link [My E-com Docs](https://documenter.getpostman.com/view/24360292/2s935pr41m).
-
-## API Endpoints
-
-#### Users Endpoints
-
-`POST users/signUp`: Register a user.
-
-`POST users/login`: Login a user.
-
-`PATCH users/updateUser/:id`: Update a user by User ID.
-
-`GET users/getAll`: Fetch all the users from the database(Only the admin is authorized)
-
-#### Products endpoints
-
-`POST products/addProducts`: Add products in the database(Only the admin is authorized)
-
-#### Cart Endpoints
-
-`POST carts/addItemToCart?productID={:id}`: Add items to the cart
-
-#### Checkout Endpoints
-
-`POST checkout/getPurchaseDetails`: Final checkout and get purchase details.
-
-#### Admin Endpoints
-
-`POST admin/generateDiscountCode`: Generate a unique discount coupon(Only the admin is authorized).
-
-`GET admin/getTotalPurchaseDetails`: Get total purchase details i.e. count of items purchased, total purchase amount, list of discount codes and total discount amount(Only the admin is authorized).
-
-## Demo
-
-https://user-images.githubusercontent.com/110348583/217510610-827445d4-5d8d-41b6-b035-f117be55c7e9.mp4
+4. Access the API at `http://localhost:4000/`
